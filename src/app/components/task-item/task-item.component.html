@@ -1,0 +1,19 @@
+<!-- this import the contained of the db 
+    using the task interface there by inport name and day
+    and also setting reminder by dside of the component when it true 
+-->
+<div
+ class="task"
+ [ngClass]="{reminder: task.reminder}"
+ (dblclick)="onToggle(task)">
+    <h4>
+        {{task.text}} 
+        <button><i
+        (click)="onDelete(task)"
+         [ngStyle]="{color:'red'}" 
+         class="material-icons">
+         X
+        </i></button>
+    </h4>
+    <p>{{task.day}}</p> 
+</div>

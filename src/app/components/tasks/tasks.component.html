@@ -1,0 +1,13 @@
+<!-- adding out event property -->
+<app-add-task
+    (onAddTask)="addTask($event)"
+></app-add-task>
+<!-- using the task-item component 
+    to loop throught the db task (property task)
+-->
+    <app-task-item
+    *ngFor="let task of tasks" 
+    [task]="task"
+    (onDeleteTask)="deleteTask(task)"
+    (onToggleReminder)="toggleReminder(task)">
+  </app-task-item>

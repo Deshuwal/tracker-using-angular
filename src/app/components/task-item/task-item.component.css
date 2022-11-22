@@ -1,0 +1,16 @@
+/* setting the task display formating */
+.task{
+    background: #f4f4f4f4;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* this css display on the ui when a reminder is true */
+.task.reminder{
+    border-left: 5px solid green;
+}
+.task h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+<header>
+    <h1>{{title}}</h1>
+    <!-- this color and text  and also btnclick event enable reusability of the component button -->
+    <!-- the btnclick is emitted by the button onclick triger and collected by the header .ts to carry out toggling operation -->
+    <!-- show add task when it true set color and text to red and close else green and add -->
+    <app-button
+     *ngIf ="hasRoute('/')"
+     color ="{{showAddTask ? 'red':'green'}}" 
+     text ="{{showAddTask ? 'Close':'Add'}}" 
+     (btnClick)="toggleAddTask()"
+    ></app-button>
+</header>
